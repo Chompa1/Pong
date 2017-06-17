@@ -51,7 +51,7 @@ void Game::gameLoop()
 
 		checkState()->HandleEvents(deltaTime);
 		checkState()->Update(deltaTime);
-		this->window.clear(sf::Color(200, 200, 200));
+		this->window.clear(this->windowColor);
 		checkState()->Render(deltaTime);
 		this->window.display();
 	}

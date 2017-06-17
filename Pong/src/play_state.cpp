@@ -6,6 +6,8 @@
 PlayState::PlayState(Game* game)
 {
 	this->game = game;
+	game->windowColor = sf::Color(200, 200, 200);
+
 	player1 = new Paddle(sf::Color(255, 75, 75), sf::Vector2f(0.0f, 0.0f));
 	paddleAI = new PaddleAI(sf::Color(75, 75, 255), sf::Vector2f(0.0f, 0.0f));
 	ball = new Ball(sf::Color(255, 255, 255), sf::Vector2f(0, 0));
@@ -23,16 +25,16 @@ PlayState::PlayState(Game* game)
 	}
 		
 	leftText.setFont(font);
-	leftText.setPosition(sf::Vector2f(separator.getPosition().x - 100.0f - (fontSize / 2), separator.getSize().y / 2 - fontSize / 1.5));
 	leftText.setString(std::to_string(leftScore));
 	leftText.setCharacterSize(fontSize);
 	leftText.setFillColor(sf::Color(175, 175, 175));
+	leftText.setPosition(sf::Vector2f(separator.getPosition().x - 100.0f - (leftText.getLocalBounds().width / 2), separator.getSize().y / 2 - fontSize / 1.5));
 
 	rightText.setFont(font);
-	rightText.setPosition(sf::Vector2f(separator.getPosition().x + 100.0f + separator.getSize().x, separator.getSize().y / 2 - fontSize / 1.5));
 	rightText.setString(std::to_string(rightScore));
 	rightText.setCharacterSize(fontSize);
 	rightText.setFillColor(sf::Color(175, 175, 175));
+	rightText.setPosition(sf::Vector2f(separator.getPosition().x + 100.0f + separator.getSize().x, separator.getSize().y / 2 - fontSize / 1.5));
 }
 
 void PlayState::Render(const float deltaTime)
