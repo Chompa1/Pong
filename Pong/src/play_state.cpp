@@ -28,7 +28,7 @@ PlayState::PlayState(Game* game)
 	leftText.setString(std::to_string(leftScore));
 	leftText.setCharacterSize(fontSize);
 	leftText.setFillColor(sf::Color(175, 175, 175));
-	leftText.setPosition(sf::Vector2f(separator.getPosition().x - 100.0f - (leftText.getLocalBounds().width / 2), separator.getSize().y / 2 - fontSize / 1.5));
+	leftText.setPosition(sf::Vector2f(separator.getPosition().x - 100.0f - leftText.getLocalBounds().width, separator.getSize().y / 2 - fontSize / 1.5));
 
 	rightText.setFont(font);
 	rightText.setString(std::to_string(rightScore));
