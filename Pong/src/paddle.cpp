@@ -7,7 +7,7 @@ Paddle::Paddle(sf::Color fillColour, sf::Vector2f position)
 	paddle.setOutlineThickness(-3.0f);
 	paddle.setPosition(position);
 	paddle.setFillColor(fillColour);
-	paddle.setOutlineColor(sf::Color::Black);
+	paddle.setOutlineColor(sf::Color(125, 125, 125));
 }
 
 void Paddle::move(float deltaTime, Direction direction)

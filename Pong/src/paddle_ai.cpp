@@ -8,7 +8,7 @@ PaddleAI::PaddleAI(sf::Color fillColour, sf::Vector2f position)
 	paddle_ai.setOutlineThickness(-3.0f);
 	paddle_ai.setPosition(position);
 	paddle_ai.setFillColor(fillColour);
-	paddle_ai.setOutlineColor(sf::Color::Black);
+	paddle_ai.setOutlineColor(sf::Color(125, 125, 125));
 }
 
 void PaddleAI::followBall(float deltaTime, Ball ball)

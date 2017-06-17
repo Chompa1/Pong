@@ -7,16 +7,12 @@
 void Game::pushState(GameState* state)
 {
 	this->states.push(state);
-
-	return;
 }
 
 void Game::popState()
 {
 	delete this->states.top();
 	this->states.pop();
-
-	return;
 }
 
 void Game::changeState(GameState* state)

@@ -6,11 +6,11 @@
 PlayState::PlayState(Game* game)
 {
 	this->game = game;
-	game->windowColor = sf::Color(200, 200, 200);
+	game->windowColor = sf::Color(0, 0, 0);
 
-	player1 = new Paddle(sf::Color(255, 75, 75), sf::Vector2f(0.0f, 0.0f));
-	paddleAI = new PaddleAI(sf::Color(75, 75, 255), sf::Vector2f(0.0f, 0.0f));
-	ball = new Ball(sf::Color(255, 255, 255), sf::Vector2f(0, 0));
+	player1 = new Paddle(sf::Color(175, 175, 175), sf::Vector2f(0.0f, 0.0f));
+	paddleAI = new PaddleAI(sf::Color(175, 175, 175), sf::Vector2f(0.0f, 0.0f));
+	ball = new Ball(sf::Color(175, 175, 175), sf::Vector2f(0, 0));
 
 	resetPositions();
 
