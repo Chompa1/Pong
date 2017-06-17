@@ -36,20 +36,13 @@ void MenuState::flashText(sf::Text &text)
 {
 	if (alpha == 255)
 		visible = true;
-
 	else if (alpha == 0)
 		visible = false;
 
 	if (visible)
-	{
 		alpha -= 3;
-	}
 	else
-	{
 		alpha += 3;
-	}
-
-	std::cout << alpha << std::endl;
 
 	text.setFillColor(sf::Color(200, 200, 200, alpha));
 }
